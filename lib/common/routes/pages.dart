@@ -1,23 +1,25 @@
+// ignore_for_file: constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:chatty/common/middlewares/middlewares.dart';
-
 import 'package:get/get.dart';
 
+import '../../pages/frame/welcome/index.dart';
 import 'routes.dart';
 
 class AppPages {
   static const INITIAL = AppRoutes.INITIAL;
   static final RouteObserver<Route> observer = RouteObservers();
   static List<String> history = [];
- /*
+
   static final List<GetPage> routes = [
-    // 免登陆
+    // No need to log in
+    //about boot up the app
     GetPage(
       name: AppRoutes.INITIAL,
-      page: () => WelcomePage(),
+      page: () => const WelcomePage(),
       binding: WelcomeBinding(),
     ),
+    /*
     GetPage(
       name: AppRoutes.SIGN_IN,
       page: () => SignInPage(),
@@ -54,11 +56,6 @@ class AppPages {
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),
     GetPage(name: AppRoutes.VoiceCall, page: () => VoiceCallViewPage(), binding: VoiceCallViewBinding()),
     GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),
-  ];*/
-
-
-
-
-
-
+    */
+  ];
 }

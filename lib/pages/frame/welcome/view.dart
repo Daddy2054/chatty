@@ -1,8 +1,7 @@
-import 'package:chatty/common/values/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
+import '../../../common/values/colors.dart';
 import 'index.dart';
 
 class WelcomePage extends GetView<WelcomeController> {
