@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../common/values/colors.dart';
 import 'index.dart';
@@ -9,13 +10,17 @@ class WelcomePage extends GetView<WelcomeController> {
 
   Widget _buildPageHeadTitle(String title) {
     return Container(
+      margin: const EdgeInsets.only(
+        top: 350,
+      ),
       child: Text(
         title,
-        style: const TextStyle(
+        textAlign: TextAlign.center,
+        style:  TextStyle(
           color: AppColors.primaryElementText,
           fontFamily: 'Montserrat',
           fontWeight: FontWeight.bold,
-          fontSize: 45,
+          fontSize: 45.sp,
         ),
       ),
     );
@@ -24,7 +29,12 @@ class WelcomePage extends GetView<WelcomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(child: _buildPageHeadTitle(controller.title),),
+      backgroundColor: AppColors.primaryElement,
+      body: SizedBox(
+        width: 360.w,
+        height: 780.h,
+        child: _buildPageHeadTitle(controller.title),
+      ),
     );
   }
 }
